@@ -10,20 +10,7 @@ if (contactForm && container) {
 }
 
 
-/* CART PAGE */
-const productsElems = document.querySelectorAll(".product");
 
-for(let product of productsElems){
-    product.addEventListener("click", () =>{
-        let productName = product.querySelector("h2").innerHTML;
-        let productPrice = product.querySelector("p").innerHTML;
-        let productImg = product.querySelector("img").src;
-        window.localStorage.setItem("productName", productName);
-        window.localStorage.setItem("productPrice", productPrice);
-        window.localStorage.setItem("productImg", productImg);
-        window.location = "product.html";
-    });
-}
 
 /* PRODUCT PAGE */
 const productPageCont = document.getElementById('productPageCont');
@@ -48,44 +35,49 @@ if (productPageCont) {
     });
 }
 if(document.querySelector('.cupcakeDiv')){
-  console.log("hey");
   generateProducts();
 }
 
 
-function generateProducts(){
+function generateProducts() {
   const cupcakeCont = document.querySelector(".cupcakeDiv .product-container");
   const cakeCont = document.querySelector(".cakeDiv .product-container");
+
   fetch('products.json')
-  .then((response) => response.json())
-  .then((json) => {
-    const cupcakes = json.cupcakes;
-    const weddingCakes = json.weddingCakes;
+    .then(response => response.json())
+    .then(json => {
+      const { cupcakes, weddingCakes } = json;
 
-    for(product of cupcakes){
-      const item = document.createElement("div");
-      item.className = "product";
+      cupcakes.forEach(product => {
+        const item = createProductElement(product);
+        cupcakeCont.appendChild(item);
+      });
 
-      item.innerHTML = `
-       <img src="${product.imgSrc}" alt="Product Image" class="product-image">
-      <h2 class="product-title">${product.name}</h2>
-      <p class="product-price">${product.price}</p>
-    `;
-    cupcakeCont.appendChild(item);
-    }
+      weddingCakes.forEach(product => {
+        const item = createProductElement(product);
+        cakeCont.appendChild(item);
+      });
+    });
+}
 
-    for(product of weddingCakes){
-      const item = document.createElement("div");
-      item.className = "product";
+function createProductElement(product) {
+  const item = document.createElement("div");
+  item.className = "product";
 
-      item.innerHTML = `
-       <img src="${product.imgSrc}" alt="Product Image" class="product-image">
-      <h2 class="product-title">${product.name}</h2>
-      <p class="product-price">${product.price}</p>
-    `;
-    cakeCont.appendChild(item);
-    }
+  item.innerHTML = `
+    <img src="${product.imgSrc}" alt="${product.name}" class="product-image">
+    <h2 class="product-title">${product.name}</h2>
+    <p class="product-price">${product.price}</p>
+  `;
+
+  item.addEventListener("click", () => {
+    window.localStorage.setItem("productName", product.name);
+    window.localStorage.setItem("productPrice", product.price);
+    window.localStorage.setItem("productImg", product.imgSrc);
+    window.location = "product.html";
   });
+
+  return item;
 }
 
 
