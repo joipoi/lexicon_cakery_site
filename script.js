@@ -133,4 +133,6 @@ function addToCart(product) {
 
     // Save the updated cart back to localStorage
     window.localStorage.setItem("cart", JSON.stringify(products));
+
+    alert(product.name + " succesfully added to cart");
 }

@@ -7,7 +7,13 @@
   html, body{
     height:100%;
   }
-  
+  .container{
+    height:100%;
+  }
+  a{
+    text-decoration: none;
+    color:black;
+  }
 footer{
     background-color: rgb(3, 192, 240);
     font-size:30px;
@@ -18,6 +24,21 @@ footer{
     height:150px;
     margin-top:40px;
 }
+#logo{
+  position:relative;
+  bottom:30%;
+}
+
+.icon{
+  height:50px;
+  width:50px;
+}
+
+.text{
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 30px;
+  text-align: center;
+  }
 
 /* Header & Nav menu */
 header ul {
@@ -96,12 +117,6 @@ header ul {
     color: #ff5722;
     text-align: center;
   }
-  
-
-  .text{
-    font-size:20px;
-    width:40%;
-  }
 
   /* CONTACT FORM */
   input[type=text], select, textarea {
@@ -145,11 +160,22 @@ header ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width:500px;
+    margin:auto;
+    margin-top:20px;
+  }
+#addToCart{
+  float:right;
+  font-size: 110%;
+  padding: 10px 20px;
+  background-color: #1F3939  ;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
 
   }
-  .container{
-    height:100%;
-  }
+ /* HOME PAGE */
   #backgroundImg{
     background-size: cover;  
     background-position: center;  
@@ -173,10 +199,7 @@ header ul {
     margin: 0;
     bottom:200px;
   }
-  .icon{
-    height:50px;
-    width:50px;
-  }
+
 
   /* CART PAGE */
 
@@ -225,4 +248,25 @@ header ul {
     margin-top: 30px;
     font-size: 1.2em;
     font-weight: bold;
+  }
+
+  /* ABOUT PAGE */
+
+  #backgroundImg2{
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat;  
+    height: 60vh;  
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;  
+    background-image: url('images/background2.jpg');
+    margin-bottom:40px;
+  }
+  #aboutText{
+    width:50%;
+    float:right;
+    vertical-align: auto;
   }
