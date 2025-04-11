@@ -1,0 +1,86 @@
+{
+ "cupcakes": [
+    {
+        "name": "Chocolate Cupcakes",
+        "price": "$8.99",
+        "imgSrc": "images/cupcake.jpg"
+    },
+    {
+        "name": "Vanilla Cupcakes",
+        "price": "$7.99",
+        "imgSrc": "images/cupcake2.jpg"
+    },
+    {
+        "name": "Blueberry Cupcakes",
+        "price": "$9.99",
+        "imgSrc": "images/cupcake.jpg"
+    },
+    {
+        "name": "Raspberry Cupcakes",
+        "price": "$10.99",
+        "imgSrc": "images/cupcake2.jpg"
+    },
+    {
+        "name": "Oreo Cupcakes",
+        "price": "$9.99",
+        "imgSrc": "images/cupcake.jpg"
+    },
+    {
+        "name": "Caramell Cupcakes",
+        "price": "$12.99",
+        "imgSrc": "images/cupcake2.jpg"
+    },
+    {
+        "name": "Cinnamon Cupcakes",
+        "price": "$9.99",
+        "imgSrc": "images/cupcake.jpg"
+    },
+    {
+        "name": "Apple Cupcakes",
+        "price": "$8.99",
+        "imgSrc": "images/cupcake2.jpg"
+    }
+],
+    "weddingCakes": [
+        {
+            "name": "Chocolate Cake",
+            "price": "$14.99",
+            "imgSrc": "images/cake.jpg"
+        },
+        {
+            "name": "Vanilla Cake",
+            "price": "$15.99",
+            "imgSrc": "images/cake2.jpg"
+        },
+        {
+            "name": "Blueberry Cake",
+            "price": "$14.99",
+            "imgSrc": "images/cake.jpg"
+        },
+        {
+            "name": "Raspberry Cake",
+            "price": "$16.99",
+            "imgSrc": "images/cake3.jpg"
+        },
+        {
+            "name": "Oreo Cake",
+            "price": "$16.99",
+            "imgSrc": "images/cake4.jpg"
+        },
+        {
+            "name": "Caramell Cake",
+            "price": "$14.99",
+            "imgSrc": "images/cake.jpg"
+        },
+        {
+            "name": "Cinnamon Cake",
+            "price": "$15.99",
+            "imgSrc": "images/cake3.jpg"
+        },
+        {
+            "name": "Apple Cake",
+            "price": "$14.99",
+            "imgSrc": "images/cake4.jpg"
+        }
+    ]
+}
